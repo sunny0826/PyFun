@@ -25,10 +25,10 @@ def inSchool(itime):
     else:
         print("!!!!!!")
     when = itime - 1
-    print(when)
     if when < 0:
         return -1
-    timer = threading.Timer(1, inSchool,[when])
+    print(when)
+    timer = threading.Timer(3600, inSchool,[when])
     timer.start()
 
 '''概率调整'''

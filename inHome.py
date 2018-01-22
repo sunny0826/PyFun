@@ -7,6 +7,7 @@ game:2h
 read:1h
 sleep:8h
 eat:0.5h
+handwork:2h
  '''
 import threading
 import time
@@ -25,7 +26,6 @@ def inHome(itime):
         # time.sleep(2)
         # inHome(when)
         timer = threading.Timer(3600*2, inHome,[when])
-        print('end game')
         timer.start()
     elif events=='read':
         print('start read')
@@ -36,7 +36,6 @@ def inHome(itime):
         # time.sleep(1)
         # inHome(when)
         timer = threading.Timer(3600, inHome,[when])
-        print('end read')
         timer.start()
     elif events == 'sleep':
         print('start sleep')
@@ -47,7 +46,6 @@ def inHome(itime):
         # time.sleep(8)
         # inHome(when)
         timer = threading.Timer(3600*8, inHome,[when])
-        print('end sleep')
         timer.start()
     elif events == 'eat':
         print('start eat')
@@ -58,7 +56,16 @@ def inHome(itime):
         # time.sleep(0.5)
         # inHome(when)
         timer = threading.Timer(3600*0.5, inHome,[when])
-        print('end eat')
+        timer.start()
+    elif events == 'handwork':
+        print('start handwork')
+        when = itime - 2
+        print(when)
+        if when < 0:
+            return -1
+        # time.sleep(0.5)
+        # inHome(when)
+        timer = threading.Timer(3600*2, inHome,[when])
         timer.start()
     else:
         print("!!!!!!")
@@ -66,13 +73,13 @@ def inHome(itime):
 '''概率调整'''
 def event():
     eventTime = momentInDay()
-    event_list = ['game', 'read', 'sleep','eat']
+    event_list = ['game', 'read', 'sleep', 'eat', 'handwork']
     if eventTime in ['foredawn','dawn']:
-        probabilities = [0.3, 0, 0.6, 0.1]
+        probabilities = [0.3, 0, 0.6, 0.1,0]
     elif eventTime in ['morning','forenoon']:
-        probabilities = [0.1, 0.3, 0.6, 0.1]
+        probabilities = [0.1, 0.3, 0.59, 0.1, 0.01]
     elif eventTime in ['noon','afternoon','dusk','midnight']:
-        probabilities = [0.3, 0.2, 0.1, 0.4]
+        probabilities = [0.28, 0.2, 0.1, 0.4, 0.02]
     events = random_pick(event_list, probabilities)
     return events
 
