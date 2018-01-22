@@ -2,7 +2,7 @@
 #encoding: utf-8
 #Author: guoxudong
 import time
-
+'''判断时间段'''
 def in_time_range(ranges):
     now = time.strptime(time.strftime("%H:%M:%S"),"%H:%M:%S")
     ranges = ranges.split(",")
@@ -11,6 +11,31 @@ def in_time_range(ranges):
         if time.strptime(r[0],"%H:%M:%S") <= now <= time.strptime(r[1],"%H:%M:%S") or time.strptime(r[0],"%H:%M:%S") >= now >=time.strptime(r[1],"%H:%M:%S"):
             return True
     return False
+
+'''返回时间段'''
+def momentInDay():
+    # time_now = time.strftime('%H:%M:%S', time.localtime(time.time()))
+    if in_time_range("00:00:00-02:59:59"):
+        timeSpace = "foredawn"
+    elif in_time_range("03:00:00-05:59:59"):
+        timeSpace = "dawn"
+    elif in_time_range("06:00:00-08:59:59"):
+        timeSpace = "morning"
+    elif in_time_range("09:00:00-11:59:59"):
+        timeSpace = "forenoon"
+    elif in_time_range("12:00:00-14:59:59"):
+        timeSpace = "noon"
+    elif in_time_range("15:00:00-17:59:59"):
+        timeSpace = "afternoon"
+    elif in_time_range("18:00:00-20:59:59"):
+        timeSpace = "dusk"
+    elif in_time_range("21:00:00-23:59:59"):
+        timeSpace = "midnight"
+    # else:
+    #     return -1
+    # print(timeSpace)
+    return timeSpace
+
 # import sys
 # import os
 # import getopt

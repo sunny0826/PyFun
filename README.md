@@ -1,2 +1,2 @@
 # PyFun
-have fun
+Have a good time!

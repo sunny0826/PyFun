@@ -2,34 +2,36 @@
 #encoding: utf-8
 #Author: guoxudong
 import threading
-import time
-from timer import in_time_range
+
+from inHome import inHome
+from inSchool import inSchool
+from onTour import onTour
+from proBability import random_pick
+from timer import momentInDay
+
 
 def fun_timer():
-    time_now = time.strftime('%H:%M:%S', time.localtime(time.time()))
-    if in_time_range("00:00:00-02:59:59"):
-        print("foredawn")
-    elif in_time_range("03:00:00-05:59:59"):
-        print("dawn")
-    elif in_time_range("06:00:00-08:59:59"):
-        print("morning")
-    elif in_time_range("09:00:00-11:59:59"):
-        print("forenoon")
-    elif in_time_range("12:00:00-14:59:59"):
-        print("noon")
-    elif in_time_range("15:00:00-17:59:59"):
-        print("afternoon")
-    elif in_time_range("18:00:00-20:59:59"):
-        print("dusk")
-    elif in_time_range("21:00:00-23:59:59"):
-        print("midnight")
-    else:
-        print("F")
-    print(time_now)
+    #配置概率
+    event_list = ['home', 'school', 'tour']
+    probabilities = [0.2, 0.2, 0.6]
+    site = random_pick(event_list, probabilities)
+    print(site)
+    alt_list = [6, 8, 10, 12, 24]
+    probabilities = [0.1, 0.3, 0.5, 0.1]
+    alt_time = random_pick(alt_list, probabilities)
+    print(alt_time)
+    # goTo(site,alt_time)
     global timer
     timer = threading.Timer(5, fun_timer)
     timer.start()
 
+def goTo(site,atime):
+    if site=='tour':
+        onTour(atime)
+    elif site=='home':
+        inHome(atime)
+    elif site=='school':
+        inSchool(atime)
 
 timer = threading.Timer(1, fun_timer)
 timer.start()
