@@ -1,0 +1,82 @@
+########################################################################################################################################################
+#.................................................................................................---...----.--..-----...-----------------.------------#
+#............................................................................................---..----------.---------.--------------------------------#
+#............................................................................................---..----------.---------.--------------------------------#
+#..............................................................................-------..--------..----------.---------.--------------------------------#
+#..............................................................................-----------------..----------.------------------------------------------#
+#...........................................................................--.-----------------..----------.------------------------------------------#
+#........................................................................-..--...---------------..----------.------------------------------------------#
+#........................................................................-..--...---------------..----------.------------------------------------------#
+#....................................................................--..........---------------..----------.------------------------------------------#
+#.................................--............-..--..........-..--........--.-------------------------..--.---------------------------...------------#
+#.....................................-.........-....-....---..-----.----.--..----------.-------------------.------------------------------------------#
+#.....................................-.........-....-....---..-----.----.--..----------.-------------------.------------------------------------------#
+#.................................--.......---.....-----...--..--------..---------------.----------..-------.------------------------------------------#
+#..............................---..--.----..........---..---..--------..---------------.---------...--...-------------------------..------------------#
+#.....--.....................--..-..--...--------..----------..--------..---------------.--------------.....--------=======oooxxxoo==-..---------------#
+#...........................--------..-----.....-------------..--------..---------------.--------------=xxxxo====ooooooooooooooooxxxx%xx==-------------#
+#...........................--------..-----.....-------------..--------..---------------.--------------=xxxxo====ooooooooooooooooxxxx%xx==-------------#
+#........-------...-------..--------.....==ooo==-..----------..--------..--------------------------ooxxo============oooooooooooo======ooBBB==----------#
+#..---------------.------------..-----x--oo===ooxxx==.-------..--------..-----------------------==Boo--===--========ooooooooooooo--oo===--o%%xx--------#
+#-----------------.----------..-----BB-==oooxxooooooox-------..-------------..----------------==BB---===--==-----===oo=ooooooo==---ooooooo===BBx-----..#
+#-----------------.----------..-----BB-==oooxxooooooox-------..-------------..----------------==BB---===--==-----===oo=ooooooo==---ooooooo===BBx-----..#
+#-----------------.----------..--.xxxxxBBxx=oooooxxoooxx-------------------------------------=BB=====oo===--======ooooooooo=====ooooo=oo===oooo%xx-----#
+#-----------------.----------..--.--xx=----==========ooooo.--..--------..----------.---------B====o===========================oo========oooooooo%%==-..#
+#---------------------------------xx==========ooxoo=====oo=-------..-oooo-oo==-------------ooo============================================ooooooxxxx-..#
+#---------------------------------xx==========ooxoo=====oo=-------..-oooo-oo==-------------ooo============================================ooooooxxxx-..#
+#----------------------------..---xxxx=====oBBoo.-------..-==-----xxx=====ooooooo--.-------BB==============================================oooooooBB...#
+#--------------------------------o--ooBxxBBo--..----------.-----oooo-xxxxooooooxxxx.-------BB========--==============================oooooooooooooBB-..#
+#--.-------------------------..ooxoo...--..---------------------ooxxo==---=======ooo-------BB===...  --===================================ooooooBB==---#
+#--.---------------------------==o==--------..------------.-------BB======ooxxooooo=xx-----==%----...--=======================oo=ooooooooooooxx%oo-----#
+#--.---------------------------==o==--------..------------.-------BB======ooxxooooo=xx-----==%----...--=======================oo=ooooooooooooxx%oo-----#
+#--.---------------------------==xoo--------..--.-----------------BB=====xoo-------.--==-----o%%xx=--==-=====ooooxoooooooBBxBBBB%BBBBBBBBBB%%xx=-------#
+#--.---------------------------==B%%BB---..-ooxxxxx-------------====Bxxxx-----------....--------ooxBBBBBBBxxxoo==---xx---BB---==x..........--oo--------#
+#--.---------------------------xxo..==x..==%xx..===xxx----------oo------------------....----------------------------BB---BB---xx=-----%%..---xx--------#
+#--.---------------------------xxo..==x..==%xx..===xxx----------oo------------------....----------------------------BB---BB---xx=-----%%..---xx--------#
+#--.---------------------------xxo..---xxBBoBB==-oo==.oo--------oo---==xxBBBxx=-------------------------------------BB.--BB-..oo=..---BB...oo==--------#
+#--------------------------------x..---==BB ..ooxoo-- ====------oo--=BBoo=xxBBBxx-----------------------------------BB.--BB-..==B..---%%..Bxx----------#
+#--------------------------------oBB-------x==..   ..-==--------oo--xxxxxoooxxo%%==---------------------------------BB.--BB-----oBB--.BB..xoo----------#
+#--------------------------------=xxoo------xxBBxoooooBBBBBBB%%BBB%%BxxxxxxxxxoBBBBooo==----------------------------BB.--BB-..-----==-%%xxo..----------#
+#--------------------------------=xxoo------xxBBxoooooBBBBBBB%%BBB%%BxxxxxxxxxoBBBBooo==----------------------------BB.--BB-..-----==-%%xxo..----------#
+#---------------------------------xx..------..--======--BBxxxxxxBBBBxxxBBBxxxxoxxBBBBBBBBBBBBxoo==...---------------BB.--BB-..--=ooxxxBBxxx%%==--------#
+#--------------------------------=xxBB-..---....-==xxBBBxxBooooxxxBB%BB%%BBBBB%%%BBxoo===ooxxBBBBBBBBxxo==----------BB.--BB-..==x=====BB==-xx==--------#
+#----------------------------oo%%BBBxx%xx===ooBB%BBxxxxxxxxxxxxxxxxxBxxxxxxxBBxxxxxxxxxxxxxxxxxxxxxxxooxBBBBBxxooo==%%.--BB---oo=-----xx---xx==------..#
+#----------------------------oo%%BBBxx%xx===ooBB%BBxxxxxxxxxxxxxxxxxBxxxxxxxBBxxxxxxxxxxxxxxxxxxxxxxxooxBBBBBxxooo==%%.--BB---oo=-----xx---xx==------..#
+#-------------------------oo%BBxxxxxoooxxBBxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx%%.--%%xxxxxB-----oo---xx%%Bxxxxo--#
+#-----------------------BBBBxxxoooooxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxBBBBBxxBBxxxxxxxxxxxxxxxxxxBB.--%%xxxBBx-----oo---xxxxxxxxxBoo#
+#--------------------oo%BBBBBBBBBBxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxB==--oBBxxxxx%%BBBBBBxxxxxxx%%.--%%xxxBB=-----oo---xxBBoxxxxxoo#
+#-----------------=%%xxoooooooooooBBBBxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxBB.--oo=ooBBBBBxxooooox%%xxxxxBB --%%xxxBBo-----oo==B=====ooooo==#
+#-----------------=%%xxoooooooooooBBBBxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxBB.--oo=ooBBBBBxxooooox%%xxxxxBB --%%xxxBBo-----oo==B=====ooooo==#
+#ooooooo==========xBBxxBxxxxxxxxxBooBBxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxoox%%%%-xxooooo=====oooxxxxxxxBB ..%%oooxxo-----xxxx-=====oooo===#
+#=====oo=-------==B%%ooxxxxxBxxxxoooBBxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxBBoo%%%oo=ooooBxx=====--oBBxxoooBB...%%-==ooo----=BB--=--==ooo==o==#
+#ooo==--========BBx%%xxoooxx===oooxxBBxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxoooooooxxoxxxxx==--o==--xooBBoooooo--==BBB=====BB ..%%-==xxo----Boo===============#
+#ooo==--========BBx%%xxoooxx===oooxxBBxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxoooooooxxoxxxxx==--o==--xooBBoooooo--==BBB=====BB ..%%-==xxo----Boo===============#
+#===ooooooooooBBxxx%%ooxBBBBxBBBBBooBBxxxxxxxxxxxxxxxoxxxxooooooooooo==ooo==ooo====B-------BBoxxxx=====oooooxxxoo-ooxx...BB%%%%%=--..B=================#
+#==-=========xBBxxxBBxxooooooooooooo%%xxxxxBxxxxxxxoo===xxBxx========--========--==x----.BBoooBBoo=..oooxxoooxxxx%BBxx...BBxooxxBxxBB%==--=============#
+#=======oxxxx%xxxxxxxBBBBBxxxooxxBBBxxxxxooBxx==xxxxxxxxxxxBBBB======--===----=====-BBxx-BBoooBBooooooooBBoooxxooBxxxx...ooo====oooooxBB==------=======#
+#==o==BBBBBBBBxxooxxxxxxxxxxxxxxxxxxxxxxxooxBB--oxxxxxxxxxxxxxxo--------------------..--BBBoooBBooooooooxxBBoxxxxxxxxx...==BBBxxBoooo=BBBB%%%BBB==BBBxx#
+#==o==BBBBBBBBxxooxxxxxxxxxxxxxxxxxxxxxxxooxBB--oxxxxxxxxxxxxxxo--------------------..--BBBoooBBooooooooxxBBoxxxxxxxxx...==BBBxxBoooo=BBBB%%%BBB==BBBxx#
+#xxxxxxxB%%BBxooBBxxxxxxxxxxxxxxxxxxxxxBBBB=BB--oxx%%BBBBBxxxBBo==ooooo=====oooooooxxxBBB==BBoBBooooooooooooxBBBBoxxxx...==BxxBBooooooBBoooooooB..xxo==#
+#ooxxxxx%BBBBoBBxxBxxxxxxxxxxxxxxxxxxxBBB%%oxx%%BooooxBBBB%xxBBBBBBBBBBBBBBBBBBBBBBBBBBB%==xxoxxxxooooooooooxBBxxoooxx.....Bxx==BxxxxoBBBBxxxoo%..BBxoo#
+#xxxxxxxoooBB=xx%%%xxxxxxxxxxxxxxxxxxxx%%BB=BBxxooooooooBBxxxBBBBBxxxxxxxxBBxxxooxxooooox--xxoooBBxooooxxxxxoxx==oxxoo...ooBoo===-----xx=====--B..BBo==#
+#xxxxxxxoooBB=xx%%%xxxxxxxxxxxxxxxxxxxx%%BB=BBxxooooooooBBxxxBBBBBxxxxxxxxBBxxxooxxooooox--xxoooBBxooooxxxxxoxx==oxxoo...ooBoo===-----xx=====--B..BBo==#
+#=====ooxxxBBoooxxxxxxxxxxxxxxxxxxxxxxxxxBB=%%xxxxxoooBBBBBBBBBBoo----------==ooo==-==BB---xxoooooBBBxxBxx%%x====%==xx-....Boooox=====oo--=====B..BBB==#
+#==========xx%==ooxBBxxBBBBBBBBBBBBBxxxoo--BBBxxoooooxxxxxBoooo=xx=======------==xxoBBBB-..==Booooxxx%%%%%xx%xx--x---- oo--o--==o----oooxxx--==B--BBBoo#
+#ooooo==ooooox%%xx------------------..-==xxBxxoooooooooooooxx==========---==ooo==ooxBBBBBBBxxBBBxxoxxBBB%%xxBxx=====..=ooBBx==--=xxxx=====oBBooBoooo===#
+#ooooo==ooooox%%xx------------------..-==xxBxxoooooooooooooxx==========---==ooo==ooxBBBBBBBxxBBBxxoxxBBB%%xxBxx=====..=ooBBx==--=xxxx=====oBBooBoooo===#
+#oooooooo====oooxxxooxxooo=====oooxxBB%BBBBxxxoooxxxxxxxxxxxxBBooooooooooxoo===--==x==--xxxxxxxx==BxxBBB--ooo=====ooxx===ooB=====ooBBo--xx=====xBBoo=--#
+#============oxxxxxBBxxBBBBBBBBBB%%%BBBBBxxxoooo=ooooooo====================ooooo=======oxxBB-==--xxxxx-==ooB--==oBBxx-==--o==---====-==BBx====xxx===..#
+#=====oooxxxxoooxxxxxxxxBBBBxxxoooooooooo==============================ooooooooooxxxxxxxooo=====oooxxBB=--==x..--=xxBB=--==---=====--.=====--xxxBBoo=--#
+#ooxxxxxxooooooooooooxxxxxxxxxxxxooooo=oooooooooooo==================ooooooooooooxxxxxxxxooxxoxxxxoooxx===--=--=====oo-====ooo--======----===..========#
+#ooxxxxxxooooooooooooxxxxxxxxxxxxooooo=oooooooooooo==================ooooooooooooxxxxxxxxooxxoxxxxoooxx===--=--=====oo-====ooo--======----===..========#
+#========oooooooxxxxxoo===----------=================oooooooooo=====oooooxxxxxooo========ooooxBBoo========oo===============x==oo========oo.  ..=====xxx#
+#==========ooo==--=-------======================oxxxxooo==------=========oooooo==ooooooooooxxxxx---=====oooo=xx========ooBB===========oooo-==xx===oox==#
+#xxxxxxxxxxxxoooooooooooooooooo=======oooooxxxxxo====-===============oo=======oooxxoooooooooooxx=======oooooxoo========ooxx-==---==========xxxx=====xoo#
+#xxxxxxxxxxxxoooooooooooooooooo=======oooooxxxxxo====-===============oo=======oooxxoooooooooooxx=======oooooxoo========ooxx-==---==========xxxx=====xoo#
+#xxxxxxxxxxxxxoooooooooooooooooxxxxxooo============================================ooooooooxxxxxxxxooooo==ooo==ooooooo-=======---===================o==#
+#BBBxxxxxxxxxxxxxxxxxxxxxxxxxooooo==================================oooooxxxxxxooooo==ooooooooooooo==oo========oo==========o==============o====o=======#
+#xxxxxxxxxxoooooooooooo=============oooooooxxxxxxxxxxxxxoooooxxxxxxxoooooooooooooooooooooooooo===================o====================oo===oooooooooo==#
+#xxxxxxxxooooooooooooooooooooxxxxxxxxxxxxxxxxxxxxxxxxxooxxxxxoooxxxxxxxxxxxxxxxxxxxoxxxxxoooooooooo======================oooooooooooooooooooooooooooo==#
+#xxxxxxxxooooooooooooooooooooxxxxxxxxxxxxxxxxxxxxxxxxxooxxxxxoooxxxxxxxxxxxxxxxxxxxoxxxxxoooooooooo======================oooooooooooooooooooooooooooo==#
+#ooooooooooooooooooooooxxxxxooooooooooooooooooooooooo=oooo=ooooo=======------------------=====--=====ooooooooooooooo==o==============================--#
+#
