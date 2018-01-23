@@ -12,12 +12,14 @@ def random_pick(some_list, probabilities):
         cumulative_probability += item_probability
         if x < cumulative_probability: break
     return item
+
+
 # event_list = ['home', 'school', 'tour']
 # probabilities = [0.2, 0.2, 0.6]
 # print(random_pick(event_list, probabilities))
 # 根据权重来获取 核心在于权重乘以 就相当于次数
 # def random_pick_odd(some_list, odds):
-#     print('table2')
+#     print('权重乘积')
 #     table = [z for x, y in zip(some_list, odds) for z in [x] * y]
 #     print(table)
 #     return random.choice(table)

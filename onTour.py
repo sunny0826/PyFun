@@ -2,5 +2,8 @@
 #encoding: utf-8
 #Author: guoxudong
 '''旅行'''
+import gameMain
+
+
 def onTour(time):
-    pass
+    gameMain.fun_timer()

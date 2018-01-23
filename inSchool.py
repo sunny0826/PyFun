@@ -9,26 +9,33 @@ english:0.45h
 biology:0.45h
  '''
 import threading
+import logging
+import gameMain
 from proBability import random_pick
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s %(message)s',
+    datefmt='%Y-%m-%d %a %H:%M:%S',
+    )
+
 
 '''事件'''
 def inSchool(itime):
     events = event()
-    if events=='chinese':
-        print('chinese class')
-    elif events=='math':
-        print('math class')
-    elif events == 'english':
-        print('english class')
-    elif events == 'biology':
-        print('biology class')
-    else:
-        print("!!!!!!")
     when = itime - 1
-    if when < 0:
-        return -1
-    print(when)
-    timer = threading.Timer(3600, inSchool,[when])
+    if events=='chinese':
+        logging.info('CHINESE class, remaining '+str(when)+'h')
+    elif events=='math':
+        logging.info('MATH class, remaining '+str(when)+'h')
+    elif events == 'english':
+        logging.info('ENGLISH class, remaining '+str(when)+'h')
+    elif events == 'biology':
+        logging.info('BIOLOGY class, remaining '+str(when)+'h')
+    timer = threading.Timer(1, inSchool,[when])
+    while when<0:
+        timer.cancel()
+        gameMain.fun_timer()
     timer.start()
 
 '''概率调整'''
@@ -37,7 +44,7 @@ def event():
     probabilities = [0.2, 0.3, 0.3, 0.2]
     events = random_pick(event_list, probabilities)
     return events
-
-if __name__ == '__main__':
-    timer = threading.Timer(1, inSchool,[8])
-    timer.start()
+#
+# if __name__ == '__main__':
+#     timer = threading.Timer(1, inSchool,[8])
+#     timer.start()

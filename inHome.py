@@ -10,65 +10,59 @@ eat:0.5h
 handwork:2h
  '''
 import threading
-import time
+import logging
+from gameMain import fun_timer
 from proBability import random_pick
 from timer import momentInDay
 
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s %(message)s',
+    datefmt='%Y-%m-%d %a %H:%M:%S',
+    )
 '''事件'''
 def inHome(itime):
     events = event()
     if events=='game':
-        print('start game')
         when = itime - 2
-        print(when)
+        timer = threading.Timer(2, inHome,[when])
+        logging.info('start GAME, remaining '+str(when)+'h')
         if when<0:
-            return -1
-        # time.sleep(2)
-        # inHome(when)
-        timer = threading.Timer(3600*2, inHome,[when])
+            timer.cancel()
+            fun_timer()
         timer.start()
     elif events=='read':
-        print('start read')
         when = itime - 1
-        print(when)
+        logging.info('start READ, remaining '+str(when)+'h')
+        timer = threading.Timer(1, inHome,[when])
         if when < 0:
-            return -1
-        # time.sleep(1)
-        # inHome(when)
-        timer = threading.Timer(3600, inHome,[when])
+            timer.cancel()
+            fun_timer()
         timer.start()
     elif events == 'sleep':
-        print('start sleep')
         when = itime - 8
-        print(when)
+        logging.info('start SLEEP, remaining '+str(when)+'h')
+        timer = threading.Timer(8, inHome,[when])
         if when < 0:
-            return -1
-        # time.sleep(8)
-        # inHome(when)
-        timer = threading.Timer(3600*8, inHome,[when])
+            timer.cancel()
+            fun_timer()
         timer.start()
     elif events == 'eat':
-        print('start eat')
         when = itime - 0.5
-        print(when)
+        logging.info('start EAT, remaining '+str(when)+'h')
+        timer = threading.Timer(0.5, inHome,[when])
         if when < 0:
-            return -1
-        # time.sleep(0.5)
-        # inHome(when)
-        timer = threading.Timer(3600*0.5, inHome,[when])
+            timer.cancel()
+            fun_timer()
         timer.start()
     elif events == 'handwork':
-        print('start handwork')
         when = itime - 2
-        print(when)
+        timer = threading.Timer(2, inHome,[when])
+        logging.info('start SSR event：HANDWORK!, remaining '+str(when)+'h')
         if when < 0:
-            return -1
-        # time.sleep(0.5)
-        # inHome(when)
-        timer = threading.Timer(3600*2, inHome,[when])
+            timer.cancel()
+            fun_timer()
         timer.start()
-    else:
-        print("!!!!!!")
 
 '''概率调整'''
 def event():
@@ -83,6 +77,6 @@ def event():
     events = random_pick(event_list, probabilities)
     return events
 
-if __name__ == '__main__':
-    timer = threading.Timer(1, inHome,[24])
-    timer.start()
+# if __name__ == '__main__':
+#     timer = threading.Timer(1, inHome,[24])
+#     timer.start()
