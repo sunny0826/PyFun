@@ -10,15 +10,14 @@ biology:0.45h
  '''
 import threading
 import logging
+from logging.config import fileConfig
+
 import gameMain
 from proBability import random_pick
 
-logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(asctime)s %(message)s',
-    datefmt='%Y-%m-%d %a %H:%M:%S',
-    )
-
+'''配置日志'''
+fileConfig('./log/logging.conf')
+logger=logging.getLogger('infoLogger')
 
 '''事件'''
 def inSchool(itime):

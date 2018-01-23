@@ -11,15 +11,15 @@ handwork:2h
  '''
 import threading
 import logging
+from logging.config import fileConfig
 from gameMain import fun_timer
 from proBability import random_pick
 from timer import momentInDay
 
-logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(asctime)s %(message)s',
-    datefmt='%Y-%m-%d %a %H:%M:%S',
-    )
+'''配置日志'''
+fileConfig('./log/logging.conf')
+logger=logging.getLogger('infoLogger')
+
 '''事件'''
 def inHome(itime):
     events = event()
@@ -58,7 +58,7 @@ def inHome(itime):
     elif events == 'handwork':
         when = itime - 2
         timer = threading.Timer(2, inHome,[when])
-        logging.info('start SSR event：HANDWORK!, remaining '+str(when)+'h')
+        logging.info('start SSR event: HANDWORK!, remaining '+str(when)+'h')
         if when < 0:
             timer.cancel()
             fun_timer()
