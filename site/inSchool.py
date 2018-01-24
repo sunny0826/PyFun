@@ -8,12 +8,12 @@ math:0.45h
 english:0.45h
 biology:0.45h
  '''
-import threading
 import logging
+import threading
 from logging.config import fileConfig
 
 import gameMain
-from proBability import random_pick
+from control.proBability import random_pick
 
 '''配置日志'''
 fileConfig('./log/logging.conf')

@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 #encoding: utf-8
 #Author: guoxudong
-from logging.config import fileConfig
 import logging
-import inHome
-from inSchool import inSchool
-from onTour import onTour
-from proBability import random_pick
+from logging.config import fileConfig
+
+from control.proBability import random_pick
+from site import inHome
+from site.inSchool import inSchool
+from site.onTour import onTour
 
 '''配置日志'''
 fileConfig('./log/logging.conf')

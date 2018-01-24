@@ -9,12 +9,13 @@ sleep:8h
 eat:0.5h
 handwork:2h
  '''
-import threading
 import logging
+import threading
 from logging.config import fileConfig
+
+from control.proBability import random_pick
+from control.timer import momentInDay
 from gameMain import fun_timer
-from proBability import random_pick
-from timer import momentInDay
 
 '''配置日志'''
 fileConfig('./log/logging.conf')

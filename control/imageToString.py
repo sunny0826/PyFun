@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 #encoding: utf-8
 #Author: guoxudong
-from PIL import Image       #从PIL中倒入Image类
+
 import argparse             #argparse模块用于命令行参数控制
+
+from PIL import Image
 
 parser=argparse.ArgumentParser()
 parser.add_argument('file')     #增加参数file
@@ -12,11 +14,11 @@ parser.add_argument('--height',type=int,default=80) #参数--height
 args=parser.parse_args()        #获取命令行参数
 
 # IMG=args.file
-IMG='./image/water.jpg'
+IMG='./image/welcome.jpg'
 WIDTH=args.width
 HEIGHT=args.height
 # OUTPUT=args.output
-OUTPUT='./txtResource/water.txt'
+OUTPUT='./txtResource/welcome.txt'
 
 
 ascii_char=list("$@&%Bxo=-. ")      #字符串列表
