@@ -3,7 +3,6 @@
 #Author: guoxudong
 
 import argparse             #argparse模块用于命令行参数控制
-
 from PIL import Image
 
 parser=argparse.ArgumentParser()
