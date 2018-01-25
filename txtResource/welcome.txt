@@ -1,82 +1,15 @@
-########################################################################################################################################################
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#            @@@&     @@@@x     @@@B &@@@@@@@@@@@@   ---                $$$$$.           $$$$$o.      o@@@@&      @@@@@   @@@@@@@@@@@@@                #
-#            $$$$     $$$$$     $$$= $$$$$$$$$$$$$   $$$.             o$$$$$$$%        $$$$$$$$$      B$$$$$     o$$$$$   $$$$$$$$$$$$$                #
-#            o$$$     $$$$$     $$$- $$$$$$$$$$$$$   $$$-            %$$$$$$$$$-      %$$$$$$$$$$     %$$$$$     $$$$$$   $$$$$$$$$$$$$                #
-#             $$$.    $$$$$.    $$$. $$$$$$$$$$$$$   $$$-            $$$$$$$$$$$.    &$$$$$$$$$$$$    %$$$$$.    $$$$$$   $$$$$$$$$$$$$                #
-#             $$$-    $$$$$-   B$$$  $$$&=--------   $$$-           $$$$$-.-$$$$$    $$$$$=-.%$$$$o   %$$$$$-    $$$$$$   $$$$---------                #
-#             $$$%   =$$$$$B   $$$@  $$$%            $$$-           $$$$-   .$$$$    $$$$.    -$$$$   %$$$$$&    $$$$$$   $$$$                         #
-#             $$$$   $$$$$$$   $$$o  $$$%            $$$-          $$$$-     $$$$.  $$$$=      &$$$.  %$$$$$$   B$$%$$$   $$$$                         #
-#             =$$$   $$$-$$$   $$$-  $$$%            $$$-          $$$$       $=-   $$$&        $$$@  %$$$$$$.  $$$=$$$   $$$$                         #
-#              $$$.  $$$.$$$   $$$.  $$$%            $$$-          $$$B       .     $$$-        $$$$  %$$$$$$.  $$$-$$$   $$$$                         #
-#              $$$-  $$$ $$$. -$$$   $$$&=-------    $$$-          $$$=            .$$$.        $$$$  %$$$$$$=  $$$.$$$   $$$$==------                 #
-#              $$$= &$$$ $$$- $$$$   $$$$$$$$$$$$.   $$$-          $$$-            B$$$.        $$$$  %$$$-$$$  $$$.$$$   $$$$$$$$$$$$.                #
-#              $$$@ $$$B B$$B $$$$   $$$$$$$$$$$$.   $$$-          $$$-            %$$$.        $$$$  %$$$ $$$  $$x.$$$   $$$$$$$$$$$$.                #
-#              $$$$ $$$-  $$$ $$$x   $$$$$$$$$$$$.   $$$-          $$$.            %$$$.        $$$$  %$$$ $$$ &$$- $$$   $$$$$$$$$$$$.                #
-#              B$$$ $$$.  $$$.$$$-   $$$&--------    $$$-          $$$-            x$$$.        $$$$  %$$$ $$$.$$$. $$$   $$$$--------                 #
-#              .$$$=$$$.  $$$.$$$.   $$$%            $$$-          $$$-            -$$$.        $$$$  %$$$ @$$-$$$. $$$   $$$$                         #
-#               $$$$$$$   $$$-$$$.   $$$%            $$$-          $$$B       $     $$$.        $$$$  %$$$ -$$x$$$  $$$   $$$$                         #
-#               $$$$$$-   $$$$$$@    $$$%            $$$-          $$$$      .$$$. .$$$$        $$$@  %$$$  $$$$$$  $$$   $$$$                         #
-#               $$$$$$-   -$$$$$o    $$$%            $$$-          $$$$.     $$$$.  $$$$.      @$$$-  %$$$  $$$$$o  $$$   $$$$                         #
-#               &$$$$$.    $$$$$-    $$$%            $$$-          =$$$&     $$$$   =$$$$      $$$$.  %$$$  $$$$$-  $$$   $$$$                         #
-#                $$$$$     $$$$$.    $$$$&&&&&&&&&   $$$&&&&&&&&&   $$$$$. &$$$$=    $$$$$%  $$$$$=   %$$$  $$$$$.  $$$   $$$$&&&&&&&&&                #
-#                $$$$$     $$$$$     $$$$$$$$$$$$$   $$$$$$$$$$$$    $$$$$$$$$$$.    o$$$$$$$$$$$$.   %$$$  $$$$$   $$$   $$$$$$$$$$$$$.               #
-#                $$$$&     &$$$$     $$$$$$$$$$$$$   $$$$$$$$$$$$    $$$$$$$$$$-      @$$$$$$$$$$-    %$$$  -$$$$   $$$   $$$$$$$$$$$$$                #
-#                $$$$=     .$$$$     $$$$$$$$$$$$$   $$$$$$$$$$$$     $$$$$$$$B        $$$$$$$$$-     %$$$   $$$o   $$$   $$$$$$$$$$$$$                #
-#                -===.      ===-     -============   ===========-      .B$$$x.          .x$$$&-.      -===   -==.   -==   -============                #
-#                                                                                           .                                                          #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#                                                                                                                                                      #
-#
+                                                                                                                                                      <br>
+            Baacc   ..aaaxx   xxacc..aaaaaaaaaaa..  aaa..           ooaaaaaaaB       ooaaaaaabb..     aaaaa     Baaaab  ooaaaaaaaaaaa..               <br>
+            Baacc   ..aaaxx   xxacc..aaaaaaaaaaa..  aaa..           ooaaaaaaaB       ooaaaaaabb..     aaaaa     Baaaab  ooaaaaaaaaaaa..               <br>
+            .aaaa   BBaaabb   bbaoo..aaabbbbbbba..  aaa..          Baaaabbbaaacc   ooaaaaaccaaaaa.    aaaaax    aaaaab  ooaaabbbaabba..               <br>
+             aaaa   aaaaaaa   aaa  ooabb            aaaoo          aaa..   ..aaa   aaaaB     BBaaa    aaaaac    aaaaab  ooabb                         <br>
+             aaaao  aabccaa.  aaa  ooabb            aaa..        xxabb       .    oaaaa        aaa..  abbaaa  ooaccaab  ooabb                         <br>
+             aaaao  aabccaa.  aaa  ooabb            aaa..        xxabb       .    oaaaa        aaa..  abbaaa  ooaccaab  ooabb                         <br>
+             BBaaBooaaBxxaaxooaac  ooaaaaaaaaaaa    aaaoo        ccaBB            xaabb        bbaoo  abbBBa  BBaxxaab  ooaaaaaaaaaaa                 <br>
+             ooaacBBaao  aacBBaax  ooaaaccbbbbbc    aaa..        ccaBB            xaacc        bbaxx  aaaooaxxaaa..aab  ooaaaccbbbbbc                 <br>
+               aaaaaaa   aaabbaa   ooabb            aaa..        BBacc       B..  oaaaa        aaa..  aaa  abbaab  aab  ooabb                         <br>
+               aaaaabb   ccaaaaa   ooabb            aaa..        ..aaa     ..aaa   aaaao     xxaaa    aaa  aaaaax..aab  ooabb                         <br>
+               aaaaabb   ccaaaaa   ooabb            aaa..        ..aaa     ..aaa   aaaao     xxaaa    aaa  aaaaax..aab  ooabb                         <br>
+               ccaaaBB   ooaaacc   ooaaaccccccccoo  aaacccccccc..  caaaaBBBaaacc   xxaaaccBBbaaaax    aaa  caaaa...aab  ooaaaccccccccoo               <br>
+               ooaaa..     aaaxx   ooaaaaaaaaaaaBB  aaaaaaaaaaaxx   ccaaaaaaac       xxaaaaaaaaoo     aaa  oaaaa ..aab  ooaaaaaaaaaaaBB               <br>
+                                                                                                                                                      <br>
