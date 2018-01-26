@@ -5,9 +5,9 @@ import logging
 from logging.config import fileConfig
 
 from control.proBability import random_pick
-from site import inHome
-from site.inSchool import inSchool
-from site.onTour import onTour
+from sitewhere import inHome
+from sitewhere.inSchool import inSchool
+from sitewhere.onTour import onTour
 
 '''配置日志'''
 fileConfig('./log/logging.conf')
@@ -18,7 +18,7 @@ def fun_timer():
     event_list = ['home', 'school', 'tour']
     probabilities = [0, 0, 1]
     site = random_pick(event_list, probabilities)
-    alt_list = [6, 8, 10, 12, 24]
+    alt_list = [16, 8, 10, 12, 24]
     probabilities = [0.1, 0.3, 0.5, 0.1]
     alt_time = random_pick(alt_list, probabilities)
     logging.warning('SITE:'+site+',AT LEAST:'+str(alt_time)+'h')#打印去什么地方，最短多久

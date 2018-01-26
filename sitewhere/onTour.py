@@ -15,11 +15,12 @@ logger=logging.getLogger('infoLogger')
 
 def onTour(itime):
     events = event()
-    when = itime - 2
+    when = itime - 8
     timer = threading.Timer(2 * 300, onTour, [when])
     if when < 0:
         timer.cancel()
         gameMain.fun_timer()
+        return
     logging.info('go to '+events+', remaining ' + str(when) + 'h')
     if events=='爱知县':
         where = 'mingguwu'
