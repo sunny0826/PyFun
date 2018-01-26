@@ -16,7 +16,7 @@ logger=logging.getLogger('infoLogger')
 def fun_timer():
     #配置概率
     event_list = ['home', 'school', 'tour']
-    probabilities = [0.6, 0.4, 0]
+    probabilities = [0, 0, 1]
     site = random_pick(event_list, probabilities)
     alt_list = [6, 8, 10, 12, 24]
     probabilities = [0.1, 0.3, 0.5, 0.1]

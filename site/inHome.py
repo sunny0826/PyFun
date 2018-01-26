@@ -13,7 +13,8 @@ import logging
 import threading
 from logging.config import fileConfig
 
-from control.proBability import random_pick
+from control.proBability import random_pick, random_pick_odd
+from control.py_mail import send_html
 from control.timer import momentInDay
 from gameMain import fun_timer
 
@@ -26,48 +27,60 @@ def inHome(itime):
     events = event()
     if events=='game':
         when = itime - 2
-        timer = threading.Timer(2, inHome,[when])
+        timer = threading.Timer(2*3600, inHome,[when])
         logging.info('start GAME, remaining '+str(when)+'h')
         if when<0:
             timer.cancel()
             fun_timer()
+        send_html('game', 'xin','let us play a game!')
         timer.start()
     elif events=='read':
         when = itime - 1
         logging.info('start READ, remaining '+str(when)+'h')
-        timer = threading.Timer(1, inHome,[when])
+        timer = threading.Timer(1*3600, inHome,[when])
         if when < 0:
             timer.cancel()
             fun_timer()
+        send_html('read', 'read', 'read make me strong!')
         timer.start()
     elif events == 'sleep':
         when = itime - 8
         logging.info('start SLEEP, remaining '+str(when)+'h')
-        timer = threading.Timer(8, inHome,[when])
+        timer = threading.Timer(8*3600, inHome,[when])
         if when < 0:
             timer.cancel()
             fun_timer()
+        send_html('sleep', 'wan' ,'Zzz....')
         timer.start()
     elif events == 'eat':
         when = itime - 0.5
         logging.info('start EAT, remaining '+str(when)+'h')
-        timer = threading.Timer(0.5, inHome,[when])
+        timer = threading.Timer(0.5*3600, inHome,[when])
         if when < 0:
             timer.cancel()
             fun_timer()
+        some_list = ['eat','eatWithF']
+        odds = [8, 1]
+        eatEvent = random_pick_odd(some_list,odds)
+        if eatEvent=='eat':
+            send_html('at table', 'eat_alone', 'hungry...')
+        else:
+            send_html('at table', 'eat_withfriend', 'hungry...!!!!!!!!!')
         timer.start()
     elif events == 'handwork':
         when = itime - 2
-        timer = threading.Timer(2, inHome,[when])
+        timer = threading.Timer(2*3600, inHome,[when])
         logging.info('start SSR event: HANDWORK!, remaining '+str(when)+'h')
         if when < 0:
             timer.cancel()
             fun_timer()
+        send_html('handwork', 'handwork', 'Go buy a lottery ticket!')
         timer.start()
 
 '''概率调整'''
 def event():
     eventTime = momentInDay()
+    logging.debug('Period:'+eventTime)
     event_list = ['game', 'read', 'sleep', 'eat', 'handwork']
     if eventTime in ['foredawn','dawn']:
         probabilities = [0.3, 0, 0.6, 0.1,0]
