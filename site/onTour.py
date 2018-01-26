@@ -17,11 +17,10 @@ def onTour(itime):
     events = event()
     when = itime - 2
     timer = threading.Timer(2 * 300, onTour, [when])
-    logging.info('go to '+events+', remaining ' + str(when) + 'h')
     if when < 0:
         timer.cancel()
         gameMain.fun_timer()
-    where = ''
+    logging.info('go to '+events+', remaining ' + str(when) + 'h')
     if events=='爱知县':
         where = 'mingguwu'
         site_name = '名古屋城'
@@ -56,8 +55,8 @@ def onTour(itime):
         site_name = '信州善光寺'
     else:
         raise ValueError('地点参数有误，请重新输入')
-    send_html('Tour', where, '旅行到了 '+events+' 的 '+site_name+' 好开心！')
     timer.start()
+    send_html('Tour', where, '旅行到了 '+events+' 的 '+site_name+' 好开心！')
 
 
 '''
