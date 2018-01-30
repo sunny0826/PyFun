@@ -13,10 +13,10 @@ from control.py_mail import send_html
 fileConfig('./log/logging.conf')
 logger=logging.getLogger('infoLogger')
 
-def onTour(itime):
+def doTour(itime):
     events = event()
     when = itime - 8
-    timer = threading.Timer(2 * 300, onTour, [when])
+    timer = threading.Timer(2 * 300, doTour, [when])
     if when < 0:
         timer.cancel()
         gameMain.fun_timer()

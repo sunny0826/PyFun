@@ -23,11 +23,11 @@ fileConfig('./log/logging.conf')
 logger=logging.getLogger('infoLogger')
 
 '''事件'''
-def inHome(itime):
+def doHome(itime):
     events = event()
     if events=='game':
         when = itime - 2
-        timer = threading.Timer(2*3600, inHome,[when])
+        timer = threading.Timer(2*3600, doHome,[when])
         logging.info('start GAME, remaining '+str(when)+'h')
         if when<0:
             timer.cancel()
@@ -37,7 +37,7 @@ def inHome(itime):
     elif events=='read':
         when = itime - 1
         logging.info('start READ, remaining '+str(when)+'h')
-        timer = threading.Timer(1*3600, inHome,[when])
+        timer = threading.Timer(1*3600, doHome,[when])
         if when < 0:
             timer.cancel()
             fun_timer()
@@ -46,7 +46,7 @@ def inHome(itime):
     elif events == 'sleep':
         when = itime - 8
         logging.info('start SLEEP, remaining '+str(when)+'h')
-        timer = threading.Timer(8*3600, inHome,[when])
+        timer = threading.Timer(8*3600, doHome,[when])
         if when < 0:
             timer.cancel()
             fun_timer()
@@ -55,7 +55,7 @@ def inHome(itime):
     elif events == 'eat':
         when = itime - 0.5
         logging.info('start EAT, remaining '+str(when)+'h')
-        timer = threading.Timer(0.5*3600, inHome,[when])
+        timer = threading.Timer(0.5*3600, doHome,[when])
         if when < 0:
             timer.cancel()
             fun_timer()
@@ -69,7 +69,7 @@ def inHome(itime):
         timer.start()
     elif events == 'handwork':
         when = itime - 2
-        timer = threading.Timer(2*3600, inHome,[when])
+        timer = threading.Timer(2*3600, doHome,[when])
         logging.info('start SSR event: HANDWORK!, remaining '+str(when)+'h')
         if when < 0:
             timer.cancel()

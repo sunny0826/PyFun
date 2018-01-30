@@ -20,7 +20,7 @@ fileConfig('./log/logging.conf')
 logger=logging.getLogger('infoLogger')
 
 '''事件'''
-def inSchool(itime):
+def doSchool(itime):
     events = event()
     when = itime - 1
     if events=='chinese':
@@ -31,7 +31,7 @@ def inSchool(itime):
         logging.info('ENGLISH class, remaining '+str(when)+'h')
     elif events == 'biology':
         logging.info('BIOLOGY class, remaining '+str(when)+'h')
-    timer = threading.Timer(1, inSchool,[when])
+    timer = threading.Timer(1, doSchool,[when])
     while when<0:
         timer.cancel()
         gameMain.fun_timer()

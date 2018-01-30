@@ -5,9 +5,10 @@ import logging
 from logging.config import fileConfig
 
 from control.proBability import random_pick
+
 from sitewhere import inHome
-from sitewhere.inSchool import inSchool
-from sitewhere.onTour import onTour
+from sitewhere import inSchool
+from sitewhere import onTour
 
 '''配置日志'''
 fileConfig('./log/logging.conf')
@@ -26,11 +27,11 @@ def fun_timer():
 
 def goTo(site,atime):
     if site=='tour':
-        onTour(atime)
+        onTour.doTour(atime)
     elif site=='home':
-        inHome.inHome(atime)
+        inHome.doHome(atime)
     elif site=='school':
-        inSchool(atime)
+        inSchool.doSchool(atime)
     return 0
 
 if __name__ == '__main__':
