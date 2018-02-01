@@ -4,10 +4,9 @@
 import json
 import logging
 import os
-import re
+from PIL import Image, ImageFont, ImageDraw
 import urllib
 from logging.config import fileConfig
-from lxml import etree
 from urllib import request
 import random
 import re
@@ -94,6 +93,8 @@ class CrawlOptAnalysis(object):
             with request.urlopen(url, timeout=30) as response, open(save_file, 'wb') as f_save:
                 f_save.write(response.read())
             print('Image is saved! search_word={0}, page_title={1}, save_file={2}'.format(self.search_word, page_title, save_file))
+            name = jointImage(save_file)
+            return name
         except Exception as e:
             print('save picture exception.'+str(e))
 
@@ -106,9 +107,9 @@ class CrawlOptAnalysis(object):
             events = page_list[random_num]['article_title']
             url = page_list[random_num]['image_url']
             info = page_list[random_num]['feature']
-            # self._save_picture(events,url)#发送的同时保存图片，后续将处理图片
+            name = self._save_picture(events,url)#发送的同时保存图片，后续将处理图片
             print(page_list[random_num])
-            send_html('Tour', 'zhanwei', where+';'+events+';'+info,url)
+            send_html('Tour', name, where+';'+events+';'+info,url)
         except Exception as e:
             print(e)
 
@@ -136,7 +137,25 @@ def destination():
         dest_name = dest_list[r_dest]
     return dest_name
 
+def jointImage(image):
+    img1 = Image.open(image)
+    img1 = img1.convert('RGBA')
+    x,y=img1.size
+    img2 = Image.open("./resource/img/point.png")
+    img2 = img2.convert('RGBA')
+
+    r, g, b, alpha = img2.split()
+    alpha = alpha.point(lambda i: i > 0 and 204)
+
+    img1.paste(img2, (x-200, y-160),alpha)
+    # img = Image.composite(img2, img1, alpha)
+    # img1.show()
+    image_name = image.split('.jpg')[0] + '.png'
+    img1.save(image_name)
+
+    return image_name
+
 if __name__ == '__main__':
-    site =destination()
+    site = destination()
     print(site)
     CrawlOptAnalysis(site).go()

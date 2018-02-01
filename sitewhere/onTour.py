@@ -57,7 +57,7 @@ def doTour(itime):
         site_name = '信州善光寺'
     elif events == '世界':
         site = destination()
-        print(site)
+        logging.info(site)
         CrawlOptAnalysis(site).go()
     else:
         raise ValueError('地点参数有误，请重新输入')
