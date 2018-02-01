@@ -9,6 +9,7 @@ from control.proBability import random_pick
 from sitewhere import inHome
 from sitewhere import inSchool
 from sitewhere import onTour
+from welcome import welcome
 
 '''配置日志'''
 fileConfig('./log/logging.conf')
@@ -35,4 +36,5 @@ def goTo(site,atime):
     return 0
 
 if __name__ == '__main__':
+    user_name = welcome.welcome()
     fun_timer()

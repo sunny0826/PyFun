@@ -2,12 +2,14 @@
 #encoding: utf-8
 #Author: guoxudong
 '''旅行'''
+import random
 import threading
 from logging.config import fileConfig
 import logging
 import gameMain
 from control.proBability import random_pick_odd
 from control.py_mail import send_html
+from goWorld import destination, CrawlOptAnalysis
 
 '''配置日志'''
 fileConfig('./log/logging.conf')
@@ -15,13 +17,12 @@ logger=logging.getLogger('infoLogger')
 
 def doTour(itime):
     events = event()
-    when = itime - 8
-    timer = threading.Timer(2 * 300, doTour, [when])
-    if when < 0:
+    global timer
+    if itime <= 0:
         timer.cancel()
         gameMain.fun_timer()
         return
-    logging.info('go to '+events+', remaining ' + str(when) + 'h')
+    where = ''
     if events=='爱知县':
         where = 'mingguwu'
         site_name = '名古屋城'
@@ -54,10 +55,22 @@ def doTour(itime):
     elif events == '长野县':
         where = 'xinzhoushanguangsi'
         site_name = '信州善光寺'
+    elif events == '世界':
+        site = destination()
+        print(site)
+        CrawlOptAnalysis(site).go()
     else:
         raise ValueError('地点参数有误，请重新输入')
+    itime = random.randint(2,8)
+    print(itime)
+    # itime = itime - r_num
+    timer = threading.Timer(itime * 3600, doTour, [itime])
     timer.start()
-    send_html('Tour', where, '旅行到了 '+events+' 的 '+site_name+' 好开心！')
+    if where=='':
+        logging.info('开始世界旅行')
+    else:
+        logging.info('旅行')
+        send_html('Tour', where, '旅行到了 '+events+' 的 '+site_name+' 好开心！')
 
 
 '''
@@ -75,7 +88,7 @@ def doTour(itime):
 '''概率调整'''
 def event():
     logging.debug('说走就走的旅行！')
-    site_list = ['爱知县', '兵库县', '大分县', '京都市', '鹿儿岛','青森县','秋田县','群马县','长野县']
-    odds = [1,1,1,1,1,1,1,1,1]
+    site_list = ['爱知县', '兵库县', '大分县', '京都市', '鹿儿岛','青森县','秋田县','群马县','长野县','世界']
+    odds = [1,1,1,1,1,1,1,1,1,15]
     events = random_pick_odd(site_list, odds)
     return events

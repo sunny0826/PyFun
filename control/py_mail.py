@@ -13,7 +13,7 @@ from logging.config import fileConfig
 fileConfig('./log/logging.conf')
 logger=logging.getLogger('infoLogger')
 
-def send_html(title,name,msg):
+def send_html(title,name,msg,image_url=''):
     # 第三方 SMTP 服务
     # mail_host = "smtp.163.com"  # SMTP服务器
     mail_host = "x"  # SMTP服务器
@@ -31,7 +31,6 @@ def send_html(title,name,msg):
     message['From'] = "{}".format(sender)
     message['To'] = ",".join(receivers)
     message['Subject'] = title
-
     with open('./resource/img/'+name+'.jpg', 'rb') as f:
         # 设置附件的MIME和文件名，这里是png类型:
         mime = MIMEBase('image', 'jpg', filename=name+'.jpg')
@@ -45,9 +44,17 @@ def send_html(title,name,msg):
         encoders.encode_base64(mime)
         # 添加到MIMEMultipart:
         message.attach(mime)
-        message.attach(MIMEText('<!DOCTYPE html><html><body><h1 align="center">'+msg+'</h1>' +
+        if image_url == '':
+            message.attach(MIMEText('<!DOCTYPE html><html><body><h1 align="center">'+msg+'</h1>' +
                         '<p align="center"><img src="cid:0" style="border: medium double #614B40;border-width: 15px"></p>' +
                         '</body><h4 align="right">@sunny0826</h4></html>', 'html', 'utf-8'))
+        else:
+            site = msg.split(';')[0]
+            event = msg.split(';')[1]
+            info = msg.split(';')[2]
+            message.attach(MIMEText('<!DOCTYPE html><html><body><h1 align="center">到达' + site + '</h1><div><p>开始：'+event+'活动</p></div><div><p>内容：'+info+'</p></div>' +
+                                    '<p align="center"><img src="'+image_url+'" style="border: medium double #614B40;border-width: 15px"></p>' +
+                                    '</body><h4 align="right">@sunny0826</h4></html>', 'html', 'utf-8'))
     try:
         smtpObj = smtplib.SMTP_SSL(mail_host, 465)  # 启用SSL发信, 端口一般是465
         smtpObj.login(mail_user, mail_pass)  # 登录验证
