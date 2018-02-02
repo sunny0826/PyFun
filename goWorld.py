@@ -4,7 +4,7 @@
 import json
 import logging
 import os
-from PIL import Image, ImageFont, ImageDraw
+from PIL import Image
 import urllib
 from logging.config import fileConfig
 from urllib import request
@@ -55,17 +55,19 @@ class CrawlOptAnalysis(object):
         if content is None:
             return None
         try:
-            # stra = str(content.decode('utf8')).split('(')[1].split(')')[0]
-            deal_str = str(content.decode('utf8').lstrip('jQuery183042507453937925077_1517375011708(').strip(')'))
+            deal_str = str(content.decode('utf8').lstrip('jQuery183042507453937925077_1517375011708(').strip(')'))#去除请求前后的字符
             data_list = json.loads(deal_str)
             print(data_list)
             result_list = list()
             data_list = data_list.get('ReturnValue').get('Records')
             for item in data_list:
-                result_dict = {'article_title': item['Title'],'image_url': item['Picture'],'feature':item['SubTitle']}
+                feature = item['SubTitle']
+                if feature is None:
+                    feature = ''
+                result_dict = {'article_title': item['Title'],'image_url': item['Picture'],'feature':feature}
                 result_list.append(result_dict)
         except Exception as e:
-            print('parse data exception.'+str(e))
+            logging.error('parse data exception.'+str(e))
             site = destination()
             print(site)
             CrawlOptAnalysis(site).go()
@@ -77,7 +79,7 @@ class CrawlOptAnalysis(object):
         下载目录为./output/search_word/page_title/image_file
         '''
         if url is None or page_title is None:
-            print('save picture params is None!')
+            logging.error('save picture params is None!')
             return
         reg_str = r"[\/\\\:\*\?\"\<\>\|]"  #For Windows File filter: '/\:*?"<>|'
         page_title = re.sub(reg_str, "", page_title)
