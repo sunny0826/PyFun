@@ -35,7 +35,7 @@ class CrawlOptAnalysis(object):
     def _crawl_data(self):
         # url = 'http://image.baidu.com/search/acjson?tn=resultjson_com&ipn=rj&ct=201326592&is=&fp=result&queryWord={1}&cl=2&lm=-1&ie=utf-8&oe=utf-8&adpicid=&st=&z=&ic=&word={1}&s=&se=&tab=&width=&height=&face=&istype=&qc=&nc=1&fr=&pn=30&rn=30&gsm=1e&1517294333179='.format(offset, urllib.parse.quote(self.search_word))
         url = 'https://so.ly.com/commonAjax/AjaxHandler/GetSearchResult?sourceType=pc&searchType=1000&callback=jQuery183042507453937925077_1517375011708&keyword={0}&startCityId=321&projectType=0&selectType=&selectSourceType=0&sort=0&isStat=1&from=1&to=20&cityname=%E4%B8%8A%E6%B5%B7&fchannel=&fpagetype=&_=1517375012012'.format(urllib.parse.quote(self.search_word))
-        print(url)
+        logging.debug(url)
         try:
             with request.urlopen(url, timeout=10,) as response:
                 content = response.read()
@@ -113,7 +113,7 @@ class CrawlOptAnalysis(object):
             print(page_list[random_num])
             send_html('Tour', name, where+';'+events+';'+info,url)
         except Exception as e:
-            print(e)
+            logging.error(e)
 
 #随机生成目的地
 def destination():
