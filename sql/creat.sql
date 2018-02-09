@@ -5,7 +5,7 @@ create table t_User
 (
     user_id int auto_increment primary key,
     user_name varchar(20) not null
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
  
 create table t_Event
 (
@@ -16,7 +16,7 @@ create table t_Event
     event varchar(20) not null ,
     user_id int not null,
     foreign key(user_id) references t_User(user_id) on update cascade
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE t_Site
 (
@@ -33,7 +33,7 @@ CREATE TABLE t_Site
   spot_code5 VARCHAR(20),
   spot_name5 VARCHAR(20),
   event VARCHAR(20)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO t_Site (
   city,
