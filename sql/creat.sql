@@ -1,39 +1,40 @@
 drop database if exists pyfun;
 create database pyfun;
 use pyfun;
-create table t_User
-(
-    user_id int auto_increment primary key,
-    user_name varchar(20) not null
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `t_User` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户id',
+  `user_name` varchar(20) NOT NULL DEFAULT '' COMMENT '用户名称',
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
  
-create table t_Event
-(
-    id int auto_increment primary key,
-    site varchar(20) not null,
-    moment varchar(20) not null,
-    event_time varchar(20) not null,
-    event varchar(20) not null ,
-    user_id int not null,
-    foreign key(user_id) references t_User(user_id) on update cascade
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `t_Event` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `site` varchar(20) NOT NULL DEFAULT '' COMMENT '地点',
+  `moment` varchar(20) NOT NULL DEFAULT '' COMMENT '时刻',
+  `event_time` varchar(20) NOT NULL DEFAULT '' COMMENT '事件事件',
+  `event` varchar(20) NOT NULL DEFAULT '' COMMENT '事件',
+  `user_id` int(11) NOT NULL COMMENT '用户id',
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `t_event_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `t_User` (`user_id`) ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE t_Site
-(
-  id INT AUTO_INCREMENT PRIMARY KEY ,
-  city VARCHAR(20) NOT NULL ,
-  spot_code1 VARCHAR(20)NOT NULL,
-  spot_name1 VARCHAR(20)NOT NULL,
-  spot_code2 VARCHAR(20),
-  spot_name2 VARCHAR(20),
-  spot_code3 VARCHAR(20),
-  spot_name3 VARCHAR(20),
-  spot_code4 VARCHAR(20),
-  spot_name4 VARCHAR(20),
-  spot_code5 VARCHAR(20),
-  spot_name5 VARCHAR(20),
-  event VARCHAR(20)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `t_Site` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `city` varchar(20) NOT NULL DEFAULT '' COMMENT '城市',
+  `spot_code1` varchar(20) NOT NULL DEFAULT '' COMMENT '地点代码1',
+  `spot_name1` varchar(20) NOT NULL DEFAULT '' COMMENT '地点名称1',
+  `spot_code2` varchar(20) DEFAULT NULL COMMENT '地点代码2',
+  `spot_name2` varchar(20) DEFAULT NULL COMMENT '地点名称2',
+  `spot_code3` varchar(20) DEFAULT NULL COMMENT '地点代码3',
+  `spot_name3` varchar(20) DEFAULT NULL COMMENT '地点名称3',
+  `spot_code4` varchar(20) DEFAULT NULL COMMENT '地点代码4',
+  `spot_name4` varchar(20) DEFAULT NULL COMMENT '地点名称4',
+  `spot_code5` varchar(20) DEFAULT NULL COMMENT '地点代码5',
+  `spot_name5` varchar(20) DEFAULT NULL COMMENT '地点名称5',
+  `event` varchar(20) DEFAULT NULL COMMENT '事件',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 INSERT INTO t_Site (
   city,
